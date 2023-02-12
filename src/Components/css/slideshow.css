@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.slideshowContainer {
+  position: absolute;
+  width: 700px;
+  height: 360px;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0px 0px 44px 11px rgba(0,0,0,0.61);
+    -webkit-box-shadow: 0px 0px 44px 11px rgba(0,0,0,0.61);
+    -moz-box-shadow: 0px 0px 44px 11px rgba(0,0,0,0.61);
+}
+.carousel > ul {
+  list-style: none;
+}
+.carousel ul li.slide {
+  position: absolute;
+  inset: 0;
+  z-index:-1;
+  transition-duration: 900ms;
+}
+.slideOutAnimation {
+  transform: scale(1.2);
+}
+.slideInAnimation {
+  transform: scale(1.2);
+  transition-duration: 900ms;
+}
+
+.carousel ul li.slide[data-active] {
+  z-index: 0;
+}
+
+button {
+  position: absolute;
+  top: 160px;
+  font-family: Dosis;
+  font-size: 30px;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid lightgrey;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 1000;
+  transition-duration: 300ms;
+}
+button span {
+  position: absolute;
+  top: -3px;
+  left: 12px;
+}
+button:hover {
+  background-color: rgb(238, 238, 238);
+  opacity: 50%;
+  color: grey;
+}
+button.previousButton {
+  left: 20px;
+}
+button.nextButton {
+  right: 20px;
+}
+
+
+
+
+/* next button css */
+.next {
+  position: relative;
+  top: 50%;
+  z-index: 100;
+}
+.circleBorder-next {
+  position: absolute;
+  transform: translateY(-50%) translateX(50%);
+  right: 40px;
+  border-radius: 50%;
+}
+.circleNextBorderShow {
+  animation: flashBorderShow 300ms linear forwards;
+}
+
+.circleNextBorderHide {
+  animation: flashBorderHide 300ms linear forwards;
+}
+.next .circleBorder-1 {
+  border: 0px solid #fff;
+  width: 0px;
+  height: 0px;
+}
+.next .circleBorder-2 {
+  border: 0px solid #fff;
+  width: 160px;
+  height: 160px;
+  animation-delay: 0.05s;
+}
+.next .circleBorder-3 {
+  border: 0px solid #fff;
+  width: 320px;
+  height: 320px;
+  animation-delay: 0.10s;
+}
+.next .circleBorder-4 {
+  border: 0px solid #fff;
+  width: 480px;
+  height: 480px;
+  animation-delay: 0.15s;
+}
+.next .circleBorder-5 {
+  border: 0px solid #fff;
+  width: 640px;
+  height: 640px;
+  animation-delay: 0.20s;
+}
+.next .circleBorder-6 {
+  border: 0px solid #fff;
+  width: 800px;
+  height: 800px;
+  animation-delay: 0.25s;
+}
+.next .circleBorder-7 {
+  border: 0px solid #fff;
+  width: 960px;
+  height: 960px;
+  animation-delay: 0.3s;
+}
+.next .circleBorder-8 {
+  border: 0px solid #fff;
+  width: 1120px;
+  height: 1120px;
+  animation-delay: 0.35s;
+}
+.next .circleBorder-9 {
+  border: 0px solid #fff;
+  width: 1280px;
+  height:1280px;
+  animation-delay: 0.40s;
+}
+
+@keyframes flashBorderShow {
+  0% {
+    border-width: 0px;
+  }
+  100% {
+    border-width: 81px;
+  }
+}
+
+@keyframes flashBorderHide {
+  0% {
+    border-width: 81px;
+  }
+  100% {
+    border-width: 0px;
+  }
+}
+
+
+
+/* previous button css */
+.previous {
+  position: relative;
+  top: 50%;
+  z-index: 100;
+}
+.circleBorder-previous {
+  position: absolute;
+  transform: translateY(-50%) translateX(-50%);
+  left: 40px;
+  border-radius: 50%;
+}
+.circlePreviousBorderShow {
+  animation: flashBorderShow 300ms linear forwards;
+}
+
+.circlePreviousBorderHide {
+  animation: flashBorderHide 300ms linear forwards;
+}
+.previous .circleBorder-1 {
+  border: 0px solid #fff;
+  width: 0px;
+  height: 0px;
+}
+.previous .circleBorder-2 {
+  border: 0px solid #fff;
+  width: 160px;
+  height: 160px;
+  animation-delay: 0.05s;
+}
+.previous .circleBorder-3 {
+  border: 0px solid #fff;
+  width: 320px;
+  height: 320px;
+  animation-delay: 0.10s;
+}
+.previous .circleBorder-4 {
+  border: 0px solid #fff;
+  width: 480px;
+  height: 480px;
+  animation-delay: 0.15s;
+}
+.previous .circleBorder-5 {
+  border: 0px solid #fff;
+  width: 640px;
+  height: 640px;
+  animation-delay: 0.20s;
+}
+.previous .circleBorder-6 {
+  border: 0px solid #fff;
+  width: 800px;
+  height: 800px;
+  animation-delay: 0.25s;
+}
+.previous .circleBorder-7 {
+  border: 0px solid #fff;
+  width: 960px;
+  height: 960px;
+  animation-delay: 0.3s;
+}
+.previous .circleBorder-8 {
+  border: 0px solid #fff;
+  width: 1120px;
+  height: 1120px;
+  animation-delay: 0.35s;
+}
+.previous .circleBorder-9 {
+  border: 0px solid #fff;
+  width: 1280px;
+  height:1280px;
+  animation-delay: 0.40s;
+}
+
+@keyframes flashBorderShow {
+  0% {
+    border-width: 0px;
+  }
+  100% {
+    border-width: 81px;
+  }
+}
+
+@keyframes flashBorderHide {
+  0% {
+    border-width: 81px;
+  }
+  100% {
+    border-width: 0px;
+  }
+}
