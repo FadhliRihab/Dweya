@@ -1,8 +1,11 @@
 import React from 'react';
 import './css/Nav.css';
 import img from '../Assets/Dweya-removebg-preview.png';
-
+import {IoMdLogIn} from 'react-icons/io';
 import { FiSearch } from 'react-icons/fi';
+import { RiAccountPinCircleLine } from 'react-icons/ri';
+import {GrBasket} from 'react-icons/gr';
+
 
 const Navbar = () => {
   return (
@@ -23,12 +26,15 @@ const Navbar = () => {
         </li>
 
         <li>
+          <RiAccountPinCircleLine style={{height:"35px",width:"35px"}}/>
           <a href="">Account</a>
         </li>
         <li>
+         <GrBasket style={{height:"30px",width:"30px"}}/>
           <a href="">Basket</a>
         </li>
         <li>
+        <IoMdLogIn style={{height:"30px",width:"30px"}}/>
         <a href=''>Log in</a>
         </li>
       </ul>
