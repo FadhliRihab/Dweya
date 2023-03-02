@@ -1,18 +1,36 @@
-
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import DropDown from './Components/DropDown';
-
+import Home from './Components/Home';
 import ImageSlider from './Components/ImageSlider';
 import Navbar from './Components/Navbar';
+import Services from './Components/Services';
 import { SliderData } from './Components/SliderData';
-
+import Baby from './Services/Baby';
+import Covid from './Services/Covid';
+import HealthDevices from './Services/HealthDevices';
+import HealthNutrition from './Services/HealthNutrition';
+import Protein from './Services/Protein';
+import Super from './Services/Super';
+import Woman from './Services/Woman';
+import ShoppingList from './Components/ShoppingList'; 
+import products from './Assets/products';
 
 function App() {
   return (
     <div className="App">
       <Navbar/>
-      <DropDown/>
-      <ImageSlider slides={SliderData} />
+      <Routes>
+        <Route path='/' element={<Home />}/>
+        <Route path='/covid' element={<Covid/>} />
+        <Route path='/baby' element={<Baby/>}/>
+        <Route path='/super' element={<Super/>}/>
+        <Route path='/protein' element={<Protein/>}/>
+        <Route path='/woman' element={<Woman/>}/>
+        <Route path='/health-nutrition' element={<HealthNutrition/>}/>
+        <Route path='/health-devices' element={<HealthDevices/>}/>
+        <Route path='/shopping' element={<ShoppingList products={products}/>}/> 
+      </Routes>
     </div>
   );
 }
